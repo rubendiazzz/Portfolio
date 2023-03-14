@@ -44,13 +44,14 @@
     </section>
     <section class="contact section-hidden">
         <h2>Contact Me</h2>
-        <form>
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button>Send</button>
+        <form method="post" action="sendmail.php">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
+    
     <script src="script.js"></script>
 </body>
 </html>
