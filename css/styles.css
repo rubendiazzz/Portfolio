@@ -31,6 +31,20 @@ nav .logo a {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+
+nav .logo-navbar img{
+    float: left;
+    max-height: 2.3rem;
+    cursor: pointer;
+}
+
+nav .logo,
+nav .logo-navbar{
+    display: flex;
+    justify-content: space-between;
 }
 
 nav .nav-links {
@@ -107,6 +121,7 @@ header p {
     color: #c4c0c0;
     font-size: 36px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .about p {
@@ -114,6 +129,7 @@ header p {
     font-size: 18px;
     line-height: 1.5;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .portfolio {
@@ -122,9 +138,10 @@ header p {
 }
 
 .portfolio h2 {
-    color: #fff;
+    color: #c4bebe;
     font-size: 36px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .gallery {
@@ -132,6 +149,7 @@ header p {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
     margin-top: 30px;
+    cursor: pointer;
 }
 
 .gallery img {
@@ -155,6 +173,7 @@ header p {
     color: #c4bebe;
     font-size: 36px;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .contact form {
