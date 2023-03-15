@@ -89,15 +89,12 @@ header {
 header h1 {
     color: #fff;
     font-size: 70px;
-    margin-top: 50px;
     margin-bottom: 20px;
-    margin-right: 600px;
 }
 
 header p {
     color: #fff;
     font-size: 32px;
-    margin-right: 400px;
 }
 
 .section-hidden {
@@ -303,7 +300,6 @@ footer p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-right: 400px;
 }
 
 .skill {
@@ -330,21 +326,6 @@ footer p {
     background-color: #394D41;
     height: 100%;
     border-radius: 5px;
-}
-
-/* Responsive design */
-@media (max-width: 767px) {
-    .skill {
-        flex-basis: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 480px) {
-    .skill {
-        flex-basis: 100%;
-        margin-left: 0;
-        margin-right: 0;
-    }
 }
 
 @media screen and (max-width: 992px) {
@@ -376,6 +357,11 @@ footer p {
     nav.active .hamburger .line {
         background-color: #fff;
     }
+    
+    .skills-container {
+        display: block;
+    }
+
 }
 
 
