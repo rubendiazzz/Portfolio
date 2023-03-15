@@ -78,7 +78,7 @@ header {
     background-image: url('../img/Background.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    height: 110vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -89,12 +89,15 @@ header {
 header h1 {
     color: #fff;
     font-size: 70px;
+    margin-top: 50px;
     margin-bottom: 20px;
+    margin-right: 600px;
 }
 
 header p {
     color: #fff;
     font-size: 32px;
+    margin-right: 400px;
 }
 
 .section-hidden {
@@ -108,8 +111,6 @@ header p {
     transform: scale(1);
     transition: opacity 0.5s ease-in, transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-
-
 
 .about {
     background-color: #2C312D;
@@ -131,6 +132,20 @@ header p {
     margin-bottom: 30px;
     text-align: center;
 }
+
+.about-heading,
+.about-text {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.about-heading.visible,
+.about-text.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 
 .portfolio {
     background-color: #424944;
@@ -238,6 +253,98 @@ header p {
     border-radius: 5px;
     cursor: pointer;
     font-size: 18px;
+}
+
+footer {
+    background-color: #394D41;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #394D41;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-to-top:hover {
+    background-color: #333;
+}
+
+/* Skills Section */
+#skills {
+    background-color: transparent;
+    padding: 50px 0;
+}
+
+#skills h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 50px;
+    color: #c4bebe;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 400px;
+}
+
+.skill {
+    flex-basis: calc(33.333% - 20px);
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.skill h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.skill-level {
+    background-color: #394D41;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Responsive design */
+@media (max-width: 767px) {
+    .skill {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media screen and (max-width: 992px) {
