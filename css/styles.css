@@ -61,7 +61,7 @@ nav .hamburger .line {
 }
 
 header {
-    background-image: url('/img/Background.jpg');
+    background-image: url('../img/Background.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
