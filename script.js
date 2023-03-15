@@ -21,7 +21,6 @@ const revealSection = function (entries, observer) {
     // Re-observe the section so that it can be revealed again
     sectionObserver.observe(entry.target);
 };
-  
 
 const sectionObserver = new IntersectionObserver(revealSection, {
     root: null,
