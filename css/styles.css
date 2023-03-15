@@ -243,6 +243,7 @@ header p {
     }
 }
 
+
 .contact input[type="text"],
 .contact input[type="email"] {
     height: 40px;
@@ -263,38 +264,6 @@ header p {
     cursor: pointer;
     font-size: 18px;
 }
-
-@media screen and (max-width: 992px) {
-  nav .nav-links {
-    display: none;
-  }
-
-  nav .hamburger {
-    display: block;
-  }
-
-  nav.active .nav-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    padding: 20px;
-    z-index: 2;
-  }
-
-  nav.active .nav-links li {
-    margin: 10px 0;
-  }
-
-  nav.active .hamburger .line {
-    background-color: #fff;
-  }
-}
-
 
 @media screen and (max-width: 768px) {
 
