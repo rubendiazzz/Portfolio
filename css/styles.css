@@ -35,14 +35,14 @@ nav .logo a {
     padding-left: 5px;
 }
 
-nav .logo-navbar img{
+nav .logo-navbar img {
     float: left;
     max-height: 2.3rem;
     cursor: pointer;
 }
 
 nav .logo,
-nav .logo-navbar{
+nav .logo-navbar {
     display: flex;
     justify-content: space-between;
 }
@@ -65,6 +65,7 @@ nav .nav-links li a {
 nav .hamburger {
     display: none;
     cursor: pointer;
+    position: relative;
 }
 
 nav .hamburger .line {
@@ -73,6 +74,24 @@ nav .hamburger .line {
     background-color: #fff;
     margin: 5px;
 }
+
+/* Hamburger menu animation */
+nav .hamburger:hover .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+    transition: all 0.3s ease;
+}
+
+nav .hamburger:hover .line:nth-child(2) {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+nav .hamburger:hover .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+    transition: all 0.3s ease;
+}
+
+/* End of Hamburger menu animation */
 
 header {
     background-image: url('../img/Background.jpg');
@@ -143,7 +162,6 @@ header p {
     transform: translateX(0);
 }
 
-
 .portfolio {
     background-color: #424944;
     padding: 50px;
@@ -201,7 +219,6 @@ header p {
     opacity: 1;
     transform: scale(1);
 }
-
 
 .contact {
     background-color: #2C312D;
@@ -330,8 +347,24 @@ footer p {
 
 @media screen and (max-width: 992px) {
     nav .nav-links {
-        display: none;
-    }
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #394D41;
+        padding: 20px;
+        z-index: 2;
+        transition: left 0.3s ease-in-out;
+      }
+      
+      nav.active .nav-links {
+        left: 0;
+      }
 
     nav .hamburger {
         display: block;
@@ -357,33 +390,10 @@ footer p {
     nav.active .hamburger .line {
         background-color: #fff;
     }
-    
+
     .skills-container {
         display: block;
     }
-
-}
-
-
-.contact input[type="text"],
-.contact input[type="email"] {
-    height: 40px;
-    font-size: 18px;
-}
-
-.contact textarea {
-    height: 150px;
-    font-size: 18px;
-}
-
-.contact input[type="submit"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
 }
 
 @media screen and (max-width: 768px) {

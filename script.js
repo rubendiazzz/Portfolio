@@ -1,10 +1,20 @@
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-const nav = document.querySelector("nav");
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const nav = document.querySelector("nav");
+    const navLinks = document.querySelector(".nav-links");
+    const navLinkItems = document.querySelectorAll(".nav-links li");
 
-hamburger.addEventListener("click", () => {
-    nav.classList.toggle("active");
-});
+    function toggleMenu() {
+      nav.classList.toggle("active");
+      navLinks.classList.toggle("active");
+    }
+
+    hamburger.addEventListener("click", toggleMenu);
+
+    navLinkItems.forEach((navLinkItem) => {
+      navLinkItem.addEventListener("click", toggleMenu);
+    });
+  });
 
 
 const sections = document.querySelectorAll('section');
