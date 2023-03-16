@@ -76,20 +76,21 @@ nav .hamburger .line {
 }
 
 /* Hamburger menu animation */
-nav .hamburger:hover .line:nth-child(1) {
+nav .active-hamburger .line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
     transition: all 0.3s ease;
 }
 
-nav .hamburger:hover .line:nth-child(2) {
+nav .active-hamburger .line:nth-child(2) {
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
-nav .hamburger:hover .line:nth-child(3) {
+nav .active-hamburger .line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
     transition: all 0.3s ease;
 }
+
 
 /* End of Hamburger menu animation */
 
