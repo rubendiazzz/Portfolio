@@ -22,23 +22,25 @@ const sections = document.querySelectorAll('section');
 
 const revealSection = function (entries, observer) {
     const [entry] = entries;
-
-    if (!entry.isIntersecting) return;
-
+  
     if (entry.target.id === 'about') {
+      if (entry.isIntersecting) {
         document.querySelector('.about-heading').classList.add('visible');
         document.querySelector('.about-text').classList.add('visible');
+      } else {
+        document.querySelector('.about-heading').classList.remove('visible');
+        document.querySelector('.about-text').classList.remove('visible');
+      }
     }
-
-    entry.target.classList.remove('section-hidden');
-    entry.target.classList.add('section-visible');
-    observer.unobserve(entry.target);
-
-    // Re-observe the section so that it can be revealed again
-    sectionObserver.observe(entry.target);
-};
-
-
+  
+    if (!entry.isIntersecting) {
+      entry.target.classList.remove('section-visible');
+      entry.target.classList.add('section-hidden');
+    } else {
+      entry.target.classList.remove('section-hidden');
+      entry.target.classList.add('section-visible');
+    }
+  };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
     root: null,
