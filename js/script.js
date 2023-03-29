@@ -133,7 +133,6 @@ window.addEventListener("DOMContentLoaded", loopSkillBarsAnimation);
 window.addEventListener("load", () => {
     const preloader = document.getElementById("preloader");
 
-    // Set a minimum duration for the preloader, e.g., 1000ms (1 second)
     setTimeout(() => {
         preloader.style.display = "none";
     }, 1000);
